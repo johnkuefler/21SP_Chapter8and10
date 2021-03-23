@@ -32,5 +32,10 @@ public class MainTest {
         assertEquals(expResult, result, 0.0);
     
     }
-    
+     @Test
+    public void testThatExceptionThrown() throws Exception {
+        Exception exception = assertThrows(InvalidAgeException.class, () -> {
+            Main.calculateLifeInsurance(2);
+        });
+    }
 }
