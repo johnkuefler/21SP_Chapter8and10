@@ -13,7 +13,7 @@ public class Main {
 
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidAgeException {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Enter your age");
 
@@ -24,7 +24,10 @@ public class Main {
         System.out.println("Your estimate is " + lifeInsuranceCost);
     }
     
-    public static double calculateLifeInsurance(int age) {
+    public static double calculateLifeInsurance(int age) throws InvalidAgeException {
+        if (age < 5 || age > 110) { 
+            throw new InvalidAgeException ("Age is invalid!");}
+        
         double insuranceCost = (5 * age) + 300;
         return insuranceCost;
     }
