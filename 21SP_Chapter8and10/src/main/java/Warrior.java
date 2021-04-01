@@ -16,11 +16,13 @@ public class Warrior {
     private int hitPoints;
     private int minAttack;
     private int maxAttack;
+    private WeaponType weaponType;
 
-    public Warrior(int hitPoints, int minAttack, int maxAttack) {
+    public Warrior(int hitPoints, int minAttack, int maxAttack, WeaponType weaponType) {
         this.hitPoints = hitPoints;
         this.minAttack = minAttack;
         this.maxAttack = maxAttack;
+        this.weaponType = weaponType;
     }
     
     public Warrior attack(Warrior warriorToAttack) {

@@ -16,6 +16,11 @@ public class Rectangle {
         this.length = len; 
         this.width = wid;
     }
+    
+    public Rectangle(Rectangle rect) {
+        this.length = rect.getLength();
+        this.width = rect.getWidth();
+    }
 
     public double getLength() {
         return length;
