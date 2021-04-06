@@ -20,6 +20,11 @@ public class Elephant extends Animal {
     public double getTrunkLength() {
         return trunkLength;
     }
+    
+      @Override
+    public void makeASound() {
+        System.out.println("The elephant trumpeted");
+    }
 
     public void setTrunkLength(double trunkLength) {
         this.trunkLength = trunkLength;
